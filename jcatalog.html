@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>CodeCraft Academy</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jcatalog.html" class="active">Catalog</a></li>
+                <li><a href="learning.html">My Learning</a></li>
+                <li><a href="jcontact.html">Contact Us</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+            <button onclick="location.href='signin.html'">Sign In</button>
+        </nav>
+    </header>
+<main>
+    <section class="learning-section">
+        <h2>All Courses</h2>
+        <div class="course-list">
+
+            <div class="course-item">
+                <img src="https://img.icons8.com/color/96/python.png" alt="Python Icon" style="height: 48px;">
+                <h3>Introduction to Python Programming</h3>
+                <p>Beginner Level</p>
+            </div>
+
+            <div class="course-item">
+                <img src="https://img.icons8.com/color/96/javascript.png" alt="JS Icon" style="height: 48px;">
+                <h3>Advanced JavaScript Frameworks</h3>
+                <p>Intermediate Level</p>
+            </div>
+
+            <div class="course-item">
+                <img src="https://img.icons8.com/color/96/c++.png" alt="Java Icon" style="height: 48px;">
+                <h3>Data Structures and Algorithms in Java</h3>
+                <p>Beginner Level</p>
+            </div>
+
+            <div class="course-item">
+                <img src="https://img.icons8.com/color/96/react-native.png" alt="React Icon" style="height: 48px;">
+                <h3>Web Development with React</h3>
+                <p>Intermediate Level</p>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+    <script src="script.js"></script>
+    <script>
+        // Example of dynamic content loading (can be expanded)
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Catalog page loaded. Ready to fetch courses dynamically if needed.");
+            // In a real application, you might fetch course data from an API here
+            // and dynamically add course-item divs to the .course-list container.
+        });
+    </script>
+    <footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2025 CodeCraft Academy. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/fluency/48/github.png" alt="GitHub"></a>
+            <a href="#"><img src="https://img.icons8.com/fluency/48/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="https://img.icons8.com/fluency/48/youtube-play.png" alt="YouTube"></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

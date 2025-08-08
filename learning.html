@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>CodeCraft</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jcatalog.html">Catalog</a></li>
+                <li><a href="learning.html" class="active">My Learning</a></li>
+                <li><a href="jcontact.html">Contact Us</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+            <button onclick="location.href='signin.html'">Sign In</button>
+        </nav>
+    </header>
+<main>
+    <section class="learning-section">
+        <h2>My Learning</h2>
+
+        <h3>📘 In Progress</h3>
+        <div class="course-item">
+            <img src="https://img.icons8.com/color/96/python.png" alt="Python Icon" style="height: 50;">
+            <h4>Introduction to Python Programming</h4>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%;">60%</div>
+            </div>
+        </div>
+
+        <h3>✅ Completed</h3>
+        <div class="course-item">
+            <img src="https://img.icons8.com/color/96/data-configuration.png" alt="DSA Icon" style="height: 50;">
+            <h4>Data Structures and Algorithms</h4>
+            <div class="progress-bar complete">
+                <div class="progress-fill" style="width: 100%;">100%</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+    <script src="script.js"></script>
+    <footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2025 CodeCraft Academy. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/fluency/48/github.png" alt="GitHub"></a>
+            <a href="#"><img src="https://img.icons8.com/fluency/48/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="https://img.icons8.com/fluency/48/youtube-play.png" alt="YouTube"></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>CodeCraft</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jcatalog.html">Catalog</a></li>
+                <li><a href="learning.html">My Learning</a></li>
+                <li><a href="jcontact.html">Contact Us</a></li>
+                <li><a href="signin.html" class="active">Sign In</a></li>
+            </ul>
+            <button onclick="location.href='signup.html'">Sign Up</button>
+        </nav>
+    </header>
+    <main>
+        <h2>Sign in to CodeCraft</h2>
+        <form id="signInForm">
+            <div class="form-group">
+                <label for="signInEmail">Email:</label>
+                <input type="email" id="signInEmail" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="signInPassword">Password:</label>
+                <input type="password" id="signInPassword" name="password" required>
+            </div>
+            <button type="submit">Sign In</button>
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </form>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('signInForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            console.log('Sign In form submitted!');
+            const email = document.getElementById('signInEmail').value;
+            const password = document.getElementById('signInPassword').value;
+            console.log('Email:', email);
+            console.log('Password:', password);
+            // In a real application, you would send this data to a server for authentication.
+            alert('Sign In attempt. (This is a demo, no actual sign-in occurs)');
+            // Redirect or show success message
+        });
+    </script>
+</body>
+</html>

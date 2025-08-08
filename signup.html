@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>CodeCraft</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jcatalog.html">Catalog</a></li>
+                <li><a href="learning.html">My Learning</a></li>
+                <li><a href="jcontact.html">Contact Us</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+            <button onclick="location.href='signin.html'">Sign In</button>
+        </nav>
+    </header>
+    <main>
+        <h2>Sign Up for CodeCraft</h2>
+        <form id="signUpForm">
+            <div class="form-group">
+                <label for="signUpEmail">Email:</label>
+                <input type="email" id="signUpEmail" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="signUpPassword">Password:</label>
+                <input type="password" id="signUpPassword" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="signin.html">Sign In</a></p>
+        </form>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('signUpForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            console.log('Sign Up form submitted!');
+            const email = document.getElementById('signUpEmail').value;
+            const password = document.getElementById('signUpPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            console.log('Email:', email);
+            console.log('Password:', password);
+            // In a real application, you would send this data to a server for user registration.
+            alert('Sign Up attempt. (This is a demo, no actual registration occurs)');
+            // Redirect to sign-in or show success message
+        });
+    </script>
+</body>
+</html>
+
