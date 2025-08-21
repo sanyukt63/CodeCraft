@@ -41,25 +41,47 @@
     </main>
     <script src="script.js"></script>
     <script>
-        document.getElementById('signUpForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-            console.log('Sign Up form submitted!');
-            const email = document.getElementById('signUpEmail').value;
-            const password = document.getElementById('signUpPassword').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
+document.addEventListener("DOMContentLoaded", function () {
+    const signUpForm = document.getElementById("signUpForm");
 
-            if (password !== confirmPassword) {
+    if (signUpForm) {
+        signUpForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById("signUpEmail").value;
+            const password = document.getElementById("signUpPassword").value;
+            const confirmpassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmpassword) {
                 alert("Passwords do not match!");
                 return;
             }
 
-            console.log('Email:', email);
-            console.log('Password:', password);
-            // In a real application, you would send this data to a server for user registration.
-            alert('Sign Up attempt. (This is a demo, no actual registration occurs)');
-            // Redirect to sign-in or show success message
+            try {
+                const res = await fetch("http://localhost:8080/register", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, password, confirmpassword }),
+                });
+
+                const data = await res.json();
+                console.log("Register Response:", data);
+
+                if (res.ok) {
+                    alert(data.message || "Registration successful!");
+                    window.location.href = "index.html"; 
+                } else {
+                    alert("Registration failed: " + (data.message || "Unknown error"));
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Something went wrong. Please try again.");
+            }
         });
-    </script>
+    }
+});
+</script>
+
 </body>
 </html>
 
