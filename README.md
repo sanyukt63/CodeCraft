@@ -1,4 +1,4 @@
-# 🚀 CodeCraft
+ # 🚀 CodeCraft
 
 **CodeCraft** is your ultimate coding companion designed to make learning programming simple, engaging, and effective.
 
