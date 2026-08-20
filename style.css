@@ -10,7 +10,7 @@ body {
     color: #333; /* General text color, slightly darker for readability */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
+} 
 
 header {
     background: #1E2A38; /* Header/Nav: navy blue */
