@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.log(`Active link set for: ${link.textContent}`);
             }
         });
-    }
+    } 
 
     // Call the function on page load
     highlightActiveNav();
