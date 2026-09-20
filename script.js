@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     } 
 
-    // Call the function on page load
+    
     highlightActiveNav();
 
     // Example of a common utility function
