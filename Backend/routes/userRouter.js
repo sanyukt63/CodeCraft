@@ -8,7 +8,7 @@ router.post('/login',(req,res) => {
      
 })
 
-router.post('/logout',() => {
+router.post('/logout',(req,res) => {
 
 })
 
