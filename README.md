@@ -73,6 +73,15 @@ Ideas, bug reports, documentation improvements, and code contributions are welco
 4. Test it locally
 5. Open a pull request with a clear description
 
+## 🧪 Documentation Checklist
+
+Before opening a pull request, verify that:
+
+- [ ] Setup instructions match the current project structure
+- [ ] New features are documented
+- [ ] Roadmap items are kept up to date
+- [ ] Changes include relevant testing notes
+
 ## 📌 Status
 
 CodeCraft is an evolving project. Contributions that make the learning experience simpler, faster, or more useful are especially welcome.
