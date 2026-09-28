@@ -53,6 +53,18 @@ For the static frontend, open `index.html` in a browser or serve the directory w
 
 If you want to work on the backend, follow the setup instructions inside `Backend/`.
 
+### Backend setup
+
+From the project root, run:
+
+```bash
+cd Backend
+npm install
+node server.js
+```
+
+The backend starts on `http://localhost:8080`.
+
 ## 🗺️ Roadmap
 
 - [ ] Add a clear course/module data model
