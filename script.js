@@ -5,16 +5,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to highlight the active navigation link
     function highlightActiveNav() {
         const navLinks = document.querySelectorAll('header nav ul li a');
-        const currentPath = window.location.pathname.split('/').pop(); // Get current file name
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 
         navLinks.forEach(link => {
-            // Remove 'active' class from all links first
-            link.classList.remove('active');
-
-            // Add 'active' class if href matches current page or is index.html for root
-            if (link.getAttribute('href') === currentPath || (currentPath === '' && link.getAttribute('href') === 'index.html')) {
-                link.classList.add('active');
-                console.log(`Active link set for: ${link.textContent}`);
+            const isCurrentPage = link.getAttribute('href') === currentPath;
+            link.classList.toggle('active', isCurrentPage);
+            if (isCurrentPage) {
+                link.setAttribute('aria-current', 'page');
+            } else {
+                link.removeAttribute('aria-current');
             }
         });
     } 
