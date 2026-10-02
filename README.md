@@ -29,15 +29,15 @@ Learning syntax is easy to start and hard to stick with. CodeCraft is designed a
 
 ```text
 CodeCraft/
-├── Backend/          # Backend application
-├── index.html        # Landing page
-├── learning.html     # Learning experience
-├── jcatalog.html     # Course/catalog page
-├── jcontact.html     # Contact page
-├── signin.html       # Sign-in page
-├── signup.html       # Sign-up page
-├── script.js         # Client-side logic
-└── style.css         # Main styles
+├── Backend/
+├── index.html
+├── learning.html
+├── jcatalog.html
+├── jcontact.html
+├── signin.html
+├── signup.html
+├── script.js
+└── style.css
 ```
 
 ## ▶️ Run Locally
@@ -51,11 +51,7 @@ cd CodeCraft
 
 For the static frontend, open `index.html` in a browser or serve the directory with a local HTTP server.
 
-If you want to work on the backend, follow the setup instructions inside `Backend/`.
-
-### Backend setup
-
-From the project root, run:
+For the backend:
 
 ```bash
 cd Backend
@@ -64,6 +60,14 @@ node server.js
 ```
 
 The backend starts on `http://localhost:8080`.
+
+## 🧭 Learning Flow
+
+1. Choose a topic from the catalog.
+2. Read the lesson and examples.
+3. Practice with the related challenge.
+4. Take a quiz to check understanding.
+5. Review progress and continue to the next module.
 
 ## 🗺️ Roadmap
 
@@ -85,19 +89,6 @@ Ideas, bug reports, documentation improvements, and code contributions are welco
 4. Test it locally
 5. Open a pull request with a clear description
 
-## 🧪 Documentation Checklist
-
-Before opening a pull request, verify that:
-
-- [ ] Setup instructions match the current project structure
-- [ ] New features are documented
-- [ ] Roadmap items are kept up to date
-- [ ] Changes include relevant testing notes
-
 ## 📌 Status
 
 CodeCraft is an evolving project. Contributions that make the learning experience simpler, faster, or more useful are especially welcome.
-
----
-
-⭐ If CodeCraft is useful to you, consider starring the repository and sharing feedback.
