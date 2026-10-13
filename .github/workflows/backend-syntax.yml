@@ -1,0 +1,28 @@
+name: Backend syntax checks
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "Backend/**"
+      - ".github/workflows/backend-syntax.yml"
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "Backend/**"
+      - ".github/workflows/backend-syntax.yml"
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check backend JavaScript syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          find Backend -type d -name node_modules -prune -o -type f -name '*.js' -print0 |
+            xargs -0 -r -n1 node --check
