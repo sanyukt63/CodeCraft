@@ -26,3 +26,11 @@ test('rejects whitespace-only required fields', () => {
     email: 'student@example.com', password: '   ', confirmpassword: '   '
   }), /required/i);
 });
+
+test('accepts a valid email with surrounding whitespace', () => {
+  assert.equal(validateRegistrationInput({
+    email: '  student@example.com  ',
+    password: 'securepass1',
+    confirmpassword: 'securepass1'
+  }), null);
+});
