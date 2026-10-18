@@ -6,13 +6,14 @@ module.exports.registerUser = async (req,res,next) => {
     const validationError = validateRegistrationInput({ email, password, confirmpassword });
     if (validationError) return res.status(400).json({ message: validationError });
 
-    const isUserAlready = await userModel.findOne({email});
+    const normalizedEmail = email.trim().toLowerCase();
+    const isUserAlready = await userModel.findOne({ email: normalizedEmail });
     if(isUserAlready){
         return res.status(400).json({message: "User Already Exists"})
     }
 
     const user = await userModel.create({
-        email,
+        email: normalizedEmail,
         password,
         confirmpassword
     })
