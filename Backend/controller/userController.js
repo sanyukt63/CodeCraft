@@ -1,7 +1,7 @@
 const userModel = require('../models/userModel');
 const { validateRegistrationInput } = require('../utils/registrationValidation');
 
-module.exports.registerUser = async (req,res,next) => {
+module.exports.registerUser = async (req,res,next) => { 
     const {email,password,confirmpassword} = req.body
     const validationError = validateRegistrationInput({ email, password, confirmpassword });
     if (validationError) return res.status(400).json({ message: validationError });
