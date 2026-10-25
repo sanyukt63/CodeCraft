@@ -17,3 +17,11 @@ test('rejects short and mismatched passwords', () => {
   assert.match(validateRegistrationInput({ email: 'student@example.com', password: 'short', confirmpassword: 'short' }), /8 characters/i);
   assert.match(validateRegistrationInput({ email: 'student@example.com', password: 'securepass1', confirmpassword: 'differentpass' }), /do not match/i);
 });
+
+test('accepts email addresses with surrounding whitespace after normalization', () => {
+  assert.equal(validateRegistrationInput({
+    email: '  student@example.com  ',
+    password: 'securepass1',
+    confirmpassword: 'securepass1'
+  }), null);
+});
