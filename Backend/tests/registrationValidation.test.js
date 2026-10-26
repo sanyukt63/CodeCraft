@@ -25,3 +25,11 @@ test('accepts email addresses with surrounding whitespace after normalization', 
     confirmpassword: 'securepass1'
   }), null);
 });
+
+test('rejects email addresses containing internal whitespace', () => {
+  assert.match(validateRegistrationInput({
+    email: 'student @example.com',
+    password: 'securepass1',
+    confirmpassword: 'securepass1'
+  }), /valid email/i);
+});
