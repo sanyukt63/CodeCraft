@@ -33,3 +33,11 @@ test('rejects email addresses containing internal whitespace', () => {
     confirmpassword: 'securepass1'
   }), /valid email/i);
 });
+
+test('rejects non-string registration fields without throwing', () => {
+  assert.match(validateRegistrationInput({
+    email: null,
+    password: 'securepass1',
+    confirmpassword: 'securepass1'
+  }), /required/i);
+});
