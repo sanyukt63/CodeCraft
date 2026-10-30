@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const navLinks = document.querySelectorAll('header nav ul li a');
         const currentPath = window.location.pathname.split('/').pop(); // Get current file name
 
-        navLinks.forEach(link => { 
+        navLinks.forEach(link => {
             // Remove 'active' class from all links first
             link.classList.remove('active');
 
@@ -17,9 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.log(`Active link set for: ${link.textContent}`);
             }
         });
-    } 
+    }
 
-    
     highlightActiveNav();
 
     // Example of a common utility function
